@@ -51,10 +51,9 @@
 			  
 			  <button class="g-recaptcha submit-button w-button" 
         data-sitekey="6Lc_OsYZAAAAAJ4tVNlVKmoDKrNEcffwAQXtROwa" 
-        data-callback='onSubmit' 
-        data-action='submit'>Submit</button>
+        data-callback='onSubmit' data-action='submit' style="display: none;">Submit</button>
 			  
-			  <!--<input type="submit" value="SUBMIT" data-wait="Please wait..." class="submit-button w-button">-->
+			  <input type="submit" value="SUBMIT" data-wait="Please wait..." class="submit-button w-button">
 
             </form>
             <div class="w-form-done">
@@ -152,9 +151,8 @@
 	 <script src="https://www.google.com/recaptcha/api.js"></script>
  <script>
    function onSubmit(token) {
-   console.log("test");
      $("#wf-form-Contact-Form").submit();
    }
  </script>
 </html>
-
+ 
