@@ -139,8 +139,7 @@
   })(window,document,'script','dataLayer','GTM-53KX7W8');
   */</script> 
 <!-- <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/eb75e9265556eb696cd1cc6ed/baba8ca9c12e07e8585db852b.js");</script>  -->
-<script>
-  window.dataLayer = window.dataLayer || [];
+<script>window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'AW-990778298');
@@ -149,32 +148,19 @@
 	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 	})(window,document,'script','dataLayer','GTM-K7ND857');
+	<!-- End Google Tag Manager -->
 	if ( !document.referrer.includes('gordonlawltd.com/') ) { 
 		window.dataLayer = window.dataLayer || [];   
 		window.dataLayer.push({ 'event':'landing-page', 'utm_referer':document.referrer, 'utm_landing_page':window.location.href} )
-  }
-  </script>
-	<script src="https://www.google.com/recaptcha/api.js"></script>
-  <script>
+	}</script>
+	 <script src="https://www.google.com/recaptcha/api.js"></script>
+ <script>
    function onSubmit(token) {
-      console.log("submit button pressed!");
-      $("#wf-form-Contact-Form").submit();
-      gtag_report_conversion()
+		console.log("submit button pressed!");
+		$("#wf-form-Contact-Form").submit();
    }
    
-  function gtag_report_conversion(url) {
-      var callback = function () {
-        if (typeof(url) != 'undefined') {
-          window.location = url;
-        }
-      };
-      gtag('event', 'conversion', {
-          'send_to': 'AW-990778298/uEGSCOOw1e8BELqnuNgD',
-          'event_callback': callback
-      });
-      return false;
-  }
-  // this is the id of the form
+   // this is the id of the form
 	$("#wf-form-Contact-Form").submit(function(e) {
 
 		e.preventDefault(); // avoid to execute the actual submit of the form.
