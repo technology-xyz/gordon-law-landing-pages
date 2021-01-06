@@ -151,8 +151,30 @@
 	 <script src="https://www.google.com/recaptcha/api.js"></script>
  <script>
    function onSubmit(token) {
-     $("#wf-form-Contact-Form").submit();
+		console.log("submit button pressed!");
+		$("#wf-form-Contact-Form").submit();
    }
+   
+   // this is the id of the form
+	$("#wf-form-Contact-Form").submit(function(e) {
+
+		e.preventDefault(); // avoid to execute the actual submit of the form.
+
+		var form = $(this);
+		var url = form.attr('action');
+		
+		$.ajax({
+			   type: "POST",
+			   url: url,
+			   data: form.serialize(), // serializes the form's elements.
+			   success: function(data)
+			   {
+				   $(".w-form-done").show();
+			   }
+			 });
+
+		return false;
+	});
  </script>
 </html>
  
